@@ -84,6 +84,6 @@ button {
     width: 400px;
 }
 
-h5 {
-    color: black;
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
 }
