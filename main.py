@@ -69,6 +69,10 @@ def graph(e):
     plt.show()
 
 
-def handle_click(event):
-    output = document.getElementById("python-output")
-    output.innerHTML = f"You clicked {event.target.id}"
+def show_imgs(e):
+    carousel = document.getElementById("carouselExampleIndicators")
+    
+    if carousel.style.display == "none":
+        carousel.style.display = "block"
+    else:
+        carousel.style.display = "none"
