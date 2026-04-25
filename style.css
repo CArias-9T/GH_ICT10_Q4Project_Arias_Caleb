@@ -81,5 +81,9 @@ button {
 }
 
 .carousel-img {
-    width: 200px;
+    width: 400px;
+}
+
+h5 {
+    color: black;
 }
