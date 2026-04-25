@@ -15,6 +15,7 @@
 
     <py-config>
         packages = ['numpy', 'matplotlib']
+
     </py-config>
 
     <link rel="stylesheet" href="style.css">
@@ -54,48 +55,84 @@
 </div>
 
 <!-- CONTENT -->
+
 <div class="container-fluid body-container">
     <div class="row">
 
+        <div class="header">
+
+	 			<h1>Topaz's Gallery</h1>
+
+                 <details>
+                    <summary><p class="infotext" id="productname0">Details</p></summary>
+                    <hr>
+                    <p>
+                  Here is a gallery of moments our class, 10-Topaz, has shared over the years. If you wish to view these photos, click the button below.
+                    </p>           
+                 </details>
+
+	 				<hr>
+
+				</div>
+
+
+        <div class="button">
+            <input type="button" value="Show Images" py-click="show_imgs" class="mx-auto d-block">
+        </div>
+
         <h4 id="python-output" style="text-align:center;"></h4>
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="display:none;">
 
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                    <img src="stockimg1.webp" class="mx-auto d-block carousel-img">
+                    <img src="2025intrams.jpg" class="mx-auto d-block carousel-img">
                     <div class="carousel-caption">
-                        <h5>Title 1</h5>
-                        <p>Description text</p>
-                        <button id="Image 1" py-click="handle_click" class="btn btn-light">Display Output</button>
+                        <h5>OBMC Intramurals 2026</h5>
+                        <p>Our first intramurals under a different team––the Red Bulldogs.</p>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <img src="stockimg2.jpeg" class="mx-auto d-block carousel-img">
+                    <img src="675452824_1663037234726870_6633847051216040192_n.jpg" class="mx-auto d-block carousel-img">
                     <div class="carousel-caption">
-                        <h5>Title 2</h5>
-                        <p>Description text</p>
-                        <button id="Image 2" py-click="handle_click" class="btn btn-light">Display Output</button>
+                        <h5>Grade 9 Year-end Party</h5>
+                        <p>Our year-end party with Mr. Castano, and a streetwear theme. </p>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <img src="stockimg3.png" class="mx-auto d-block carousel-img">
+                    <img src="679555081_1231473608790479_5448973749655361180_n.jpg" class="mx-auto d-block carousel-img">
                     <div class="carousel-caption">
-                        <h5>Title 3</h5>
-                        <p>Description text</p>
-                        <button id="Image 3" py-click="handle_click" class="btn btn-light">Display Output</button>
+                        <h5>Food Fair 2025</h5>
+                        <p>Our practice at business management, by managing a basketball pop-up.</p>
+                       
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <img src="stockimg4.webp" class="mx-auto d-block carousel-img">
+                    <img src="JCO.jpg" class="mx-auto d-block carousel-img">
                     <div class="carousel-caption">
-                        <h5>Title 4</h5>
-                        <p>Description text</p>
-                        <button id="Image 4" py-click="handle_click" class="btn btn-light">Display Output</button>
+                        <h5>JCO 2025</h5>
+                        <p>A shared experience with Grade 6, as Cadets at Preziosa Farms.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="endofyear24.jpg" class="mx-auto d-block carousel-img">
+                    <div class="carousel-caption">
+                        <h5>JCO 2025</h5>
+                        <p>A shared experience with Grade 6, as Cadets at Preziosa Farms.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="endofyear25.jpg" class="mx-auto d-block carousel-img">
+                    <div class="carousel-caption">
+                        <h5>Teachers Day 2024</h5>
+                        <p>Our most memorable teacher's day, with multiple perfomances and a cake for our beloved advisor, Mr. Castano.</p>
+                       
                     </div>
                 </div>
 
@@ -112,6 +149,16 @@
         </div>
     </div>
 </div>
+
+    <!-- footer -->
+
+    <div class="container-fluid footer">
+		<p id="footer">Caleb Arias, Miguel Sanchez | 10-Topaz</p>
+	</div>
+
+	 <!-- for pyscript-->
+
+    <script type="py" src="main.py"></script>
 
 
 </body>
