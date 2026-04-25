@@ -1,0 +1,128 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student List</title>
+
+	<!-- SETUP BOOTSTRAP: Link to Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	 <!-- link to Python -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+	<!-- Link to JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	<py-config>
+		packages = ['numpy', 'matplotlib']
+	</py-config>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+      <div id="nav">
+		<nav class="navbar navbar-expand-sm navbar-dark" id="navbar">
+		    <div class="container-fluid">
+		        <a class="navbar-brand" href="index.html">
+	                <img src="oblogo.png" alt="oblogo" id="logo" style="height:40px; width:40px;">
+	            </a>
+		        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+		            <span class="navbar-toggler-icon"></span>
+		        </button>
+		        <div class="collapse navbar-collapse justify-content-between" id="mynavbar">
+		            <ul class="nav-pills nav">
+		            	<li class="nav-item">
+       	 				<a class="nav-link navlink" href="index.html" >List of Students</a>
+     	 				</li>
+      					<li class="nav-item">
+       	 				<a class="nav-link navlink" href="attendance.html">Attendance Checker</a>
+     	 				</li>
+     					 <li class="nav-item">
+       	 				<a class="nav-link navlink" href="activityphotos.html">Gallery</a>
+     					 </li>
+      					<li class="nav-item">
+        				<a class="nav-link navlink" href="playerlist.html">List of Players</a>
+      					</li>
+    					</ul>
+		            <form class="d-flex nav-form">
+		                <input class="form-control me-2" type="text" placeholder="Search...">
+		                <button class="btn btn-outline-light" type="button">Search</button>
+		            </form>
+		        </div>
+		    </div>
+		</nav>
+	</div>
+
+        
+    <div class="container-fluid body-container">
+	<div class="row">
+
+		<div class="col-sm-12">
+
+		  <div class="header">
+
+	 			<h1>OB Montessori Student List</h1>
+	 				<hr>
+           <details>
+              <summary><p class="infotext" id="productname0">Details</p></summary>
+              <hr>
+                <p>
+                  You can find the students of OB Montessori here. To add students, input the given details.
+                </p>           
+           </details>
+		  </div>
+
+		</div>
+
+
+		<div class="col-sm-6">
+
+
+        <div class="card">
+
+          <br>
+			<h3>Student Info:</h3>	
+			<form>
+			  <input type="text" id="input1"  placeholder="Enter classmate's name">
+              <input type="text" id="input2" placeholder="Enter classmates's section">
+              <input type="text" id="input3"  placeholder="Enter classmates' favorite subject">
+
+			
+			</form>
+
+            <form>
+
+                <input type="button" value="Show Classmates" id="BUTTON" py-click="show_classmates"/>
+            </form>
+
+            </div>
+        </div>
+
+		<div class="col-sm-6">
+
+		<div class="card">
+
+		<br>
+
+		<h3>List of Classmates:</h3>
+
+		 <div id="listoutput"><h4></h4></div>
+
+		</div>
+
+	</div>
+
+    </div>
+	</div>
+
+	<div class="container-fluid footer">
+		<p id="footer">Caleb Arias | 10-Topaz</p>
+	</div>
+
+
+
+        <script type="py" src="main.py"></script>
+    </body>
+</html>

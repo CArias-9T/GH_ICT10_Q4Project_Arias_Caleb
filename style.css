@@ -1,0 +1,96 @@
+body{
+    background-color:#cad2c5;
+}
+
+
+.body-container{
+	 background-image: linear-gradient(to right, #84a98c, #52796f);
+    padding: 50px;
+    margin-top:100px;
+    margin-bottom: 100px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    font-family:heiti sc;
+    color:white;
+     border:5px solid #354f52;
+}
+
+.navbar {
+    background-color: #84a98c;
+    border: 5px solid #354f52;
+}
+
+.nav-link {
+    color: antiquewhite;
+}
+
+.logo1{
+    width:50px;
+    margin:10px;
+}
+
+
+
+.card{
+  margin-top:50px;
+  margin-bottom:50px;
+  background-color:#354f52 ;
+  border:5px solid #2f3e46;
+  padding:15px;
+
+}
+
+.card-body{
+    font-family:heiti sc, courier;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+input{
+    margin-bottom: 50px;
+}
+
+select{
+    margin-bottom: 50px;
+}
+
+label{
+    color:white;
+}
+
+hr {
+    border-top: 1px dashed white;
+}
+
+h1{
+    font-family: courier;
+    color: white;
+    text-align:center;
+}
+
+h4, h3, #listoutput{
+    font-family: heiti sc, courier;
+    color: white;
+}
+
+
+button{
+    margin-bottom:30px;
+}
+
+.footer {
+    font-family: courier;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, .6);
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 4%;
+}
+
+.carousel-img {
+    width:200px;
+}
+
+
