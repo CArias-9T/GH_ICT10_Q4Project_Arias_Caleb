@@ -68,5 +68,13 @@ def graph(e):
     plt.title("Topaz's Absence's Per Month")
     plt.xlabel("Months")
     plt.ylabel("Absences")
+
+
+def handle_click(event):
+    # Get the ID of the clicked button
+    clicked_img = event.target.id
+    
+    # Display the result in the #python-output header above the carousel
+    display_area = document.getElementById("python-output")
     
  
