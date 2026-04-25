@@ -8,15 +8,14 @@ plt.figure()
 plt.plot([0, 1],[0, 1])
 plt.close()
 
-
-class Classmate: # class for all attributes
+class Classmate:
     def __init__(self, name, section, favorite_subject):
         self.name = name
         self.section = section
         self.favorite_subject = favorite_subject
 
-classmate_list = [ # global list, has initially added classmates in it
-    Classmate('Jalainie Abdullah', '10-Topaz', 'English'), 
+classmate_list = [
+    Classmate('Jalainie Abdullah', '10-Topaz', 'English'),
     Classmate('Leona Abeleda', '10-Topaz', 'Filipino'),
     Classmate('Renzo Arce', '10-Topaz', 'CAT'),
     Classmate('Caleb Arias', '10-Topaz', 'Science'),
@@ -32,49 +31,44 @@ classmate_list = [ # global list, has initially added classmates in it
     Classmate('Prince Gano', '10-Topaz', 'Filipino'),
     Classmate('Calvin Garcia', '10-Topaz', 'TLE'),
     Classmate('Simrandip Kaur', '10-Topaz', 'Math'),
-    Classmate('Miguel Sanchez', '10-Topaz', 'ICT'),
-
+    Classmate('Miguel Sanchez', '10-Topaz', 'ICT')
 ]
 
-
-def show_classmates(e): # function for adding students and displaying
-
+def show_classmates(e):
     document.getElementById('listoutput').innerHTML = ''
 
     name = document.getElementById('input1').value
     section = document.getElementById('input2').value
-    favorite_subject = document.getElementById('input3').value
+    subject = document.getElementById('input3').value
 
-    classmate = Classmate(name, section, favorite_subject) # adding student section
-    classmate_list.append(classmate)
-    
+    if name:
+        classmate_list.append(Classmate(name, section, subject))
 
+    for c in classmate_list:
+        display(
+            f"Hi! I am {c.name} from {c.section}. My favorite subject is {c.favorite_subject}.",
+            target="listoutput"
+        )
 
-    for classmate in classmate_list: # display loop
-        display(f"Hi! I am {classmate.name} from {classmate.section}. My favorite subject is {classmate.favorite_subject}.", target="listoutput")
 
 def graph(e):
-    document.getElementById('output').innerHTML = ' ' # resets value
+    document.getElementById('output').innerHTML = ''
 
-    absences = np.array([ # input absences
-        int(document.getElementById('absence').value)
-])
-    months = np.array([ # input months
-        str(document.getElementById('monthselect').value)
-])
+    try:
+        absence = int(document.getElementById('absence').value)
+    except:
+        return
 
-    topaz_absences_graph = plt.bar(months, absences) # display graph
-    plt.show(topaz_absences_graph)
-    plt.title("Topaz's Absence's Per Month")
+    month = document.getElementById('monthselect').value
+
+    plt.clf()
+    plt.bar([month], [absence])
+    plt.title("Topaz Absences Per Month")
     plt.xlabel("Months")
     plt.ylabel("Absences")
+    plt.show()
 
 
 def handle_click(event):
-    # Get the ID of the clicked button
-    clicked_img = event.target.id
-    
-    # Display the result in the #python-output header above the carousel
-    display_area = document.getElementById("python-output")
-    
- 
+    output = document.getElementById("python-output")
+    output.innerHTML = f"You clicked {event.target.id}"
