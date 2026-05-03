@@ -52,21 +52,21 @@ def show_classmates(e):
 
 
 def graph(e):
-    document.getElementById('output').innerHTML = ''
+    document.getElementById('output').innerHTML = ' ' # resets value
 
-    try:
-        absence = int(document.getElementById('absence').value)
-    except:
-        return
+    absences = np.array([ # input absences
+        int(document.getElementById('absence').value)
+])
+    months = np.array([ # input months
+        str(document.getElementById('monthselect').value)
+])
 
-    month = document.getElementById('monthselect').value
-
-    plt.clf()
-    plt.bar([month], [absence])
-    plt.title("Topaz Absences Per Month")
+    topaz_absences_graph = plt.bar(months, absences) # display graph
+    plt.show(topaz_absences_graph)
+    plt.title("Topaz's Absence's Per Month")
     plt.xlabel("Months")
     plt.ylabel("Absences")
-    plt.show()
+
 
 
 def show_imgs(e):
